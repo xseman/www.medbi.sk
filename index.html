@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+<head>
+	<title>Interná ambulancia - medbi s.r.o.</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+	<meta http-equiv="Content-Language" content="en" />
+	<meta http-equiv="last-modified" content="16.07.2009 23:00:12" />
+	<meta http-equiv="Content-Type-Script" content="text/javascript" />
+
+	<script type="text/javascript" src="public/js/prototype.js"></script>
+	<script type="text/javascript" src="public/js/scriptaculous.js%3Fload=effects"></script>
+	<script type="text/javascript" src="public/js/lightbox.js"></script>
+
+	<script>
+		window.onload = function () {
+			initImage();
+			if ($menu == 1) {
+				//initImage2();
+			}
+		}
+
+		function initImage() {
+			imageId = 'thephoto';
+			image = document.getElementById(imageId);
+			setOpacity(image, 0);
+			image.style.visibility = 'visible';
+			fadeIn(imageId, 0);
+		}
+
+		function setOpacity(obj, opacity) {
+			opacity = (opacity == 100) ? 99.999 : opacity;
+
+			// IE/Win
+			obj.style.filter = "alpha(opacity:" + opacity + ")";
+
+			// Safari<1.2, Konqueror
+			obj.style.KHTMLOpacity = opacity / 100;
+
+			// Older Mozilla and Firefox
+			obj.style.MozOpacity = opacity / 100;
+
+			// Safari 1.2, newer Firefox and Mozilla, CSS3
+			obj.style.opacity = opacity / 100;
+		}
+
+		function fadeIn(objId, opacity) {
+			if (document.getElementById) {
+				obj = document.getElementById(objId);
+				if (opacity <= 100) {
+					setOpacity(obj, opacity);
+					opacity += 5;
+					window.setTimeout("fadeIn('" + objId + "'," + opacity + ")", 50);
+				}
+			}
+		}
+	</script>
+
+	<link rel="stylesheet" type="text/css" href="public/res/styles.css" media="screen, print" />
+	<link rel="stylesheet" type="text/css" href="public/res/linky.css" media="screen, print" />
+	<link rel="stylesheet" type="text/css" href="public/res/photoholder.css" media="screen, print" />
+	<link rel="stylesheet" href="public/css/lightbox.css" type="text/css" media="screen" />
+</head>
+
+<body style="margin:30px 0px 0px 0px; background: #145ac4 url(public/res/bgr.png) repeat-x;">
+	<table width=100% align=center border="0" cellspacing="0" cellpadding="0" style="width: 1000px; margin: 0 0 0 0;">
+		<tr style="height: 150px; background: url(public/res/wtf.png) no-repeat ;">
+			<td style=" height: 90px; width: 100%;  ">
+				<table border=0 width=100% height=90px>
+					<tr>
+						<td>
+							<div style="padding: 0px 0px 0px 40px;">
+								<img src="public/res/bez3.png">
+							</div>
+						</td>
+						<td style="width: 50%; padding: 40px 0px 0px 0px;">
+							<div id="menu">
+								<b href='/'>Úvod</b>
+								<a href='/ponuka.html'>Čo ponúkame</a>
+								<a href='/galeria.html'>Galéria</a>
+								<a href='/kontakt.html'>Kontakt</a>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr style="height: 60px; background: url(public/res/bgr_ramik1.png) no-repeat center bottom;">
+			<td></td>
+		</tr>
+
+		<tr>
+			<td>
+				<table border=0 cellspacing=0 cellpadding=0 width=100% style="margin: 0px 0px 0px 0px;">
+					<td style="background: url(public/res/bok1.png) repeat-y right; width: 5%;">
+					</td>
+					<td style="width: 90%; min-height: 600px; background: #f4fdff url(public/res/bgr_obsah.png) repeat-x; vertical-align:top;padding: 30px 0 0 0;">
+						<table border=0 width=100%>
+							<tr>
+								<td>
+									<table border=0 width=100%>
+										<tr>
+											<td style="width:70%; padding: 0 0 0 30px; ">
+												<div
+													style="font: 15px Bookman Old Style; font-style: bold; color: #000080; ">
+													<B>Poskytujeme
+														nasledovné zdravotné služby pre poistencov všetkých zdravotných
+														poisťovní, nepoisteným i
+														zahraničným pacientom:</B>
+													<li>interné vyšetrenia, predoperačné vyšetrenia, EKG HOLTER, tlakovy
+														HOLTER, odbery krvi,
+														preventívne prehliadky, liečbu obezity, vysokého tlaku krvi,
+														srdcovocievnych ochorení,
+														vysokého cholesterolu a iných vnútorných ochorení</li>
+												</div>
+
+											</td>
+											<td style=" vertical-align: top; padding: 0 60px 0px 0px;">
+												<div id='photoholder'>
+													<img src="public/files/uvod.jpg" alt='Photo' id='thephoto'>
+												</div>
+											</td>
+										</tr>
+
+									</table>
+								</td>
+							</tr>
+
+							<tr>
+								<td style="padding: 0 0px 0px 30px;">
+									<!-- Ordinacne hodiny -->
+									<div style="font: 16px Bookman Old Style; font-style: bold; color: #000080; ">
+										Ordinačné hodiny
+
+										<table 
+											border=3 
+											cellpadding=3 
+											cellspacing=3 
+											width=80%
+											style="text-align: center;"
+										>
+											<tr>
+												<td style="width: 40px">Deň</td>
+												<td style="width: 70px">Odbery krvi</td>
+												<td style="width: 70px">Vyšetrovanie pacientov</td>
+												<td style="width: 70px">Zhodnocovanie laboratórnych výsledkov</td>
+												<td style="width: 70px">Holter EKG, TK</td>
+											</tr>
+											<tr>
+												<td>Pondelok</td>
+												<td style="text-align:center;">07:00-08:00</td>
+												<td style="text-align:center;">08:00-12:00</td>
+												<td style="text-align:center;">12:00-13:00</td>
+												<td style="text-align:center;">13:30-15:00</td>
+											</tr>
+											<tr>
+												<td>Utorok</td>
+												<td style="text-align:center;">07:00-08:00</td>
+												<td style="text-align:center;">08:00-12:00</td>
+												<td style="text-align:center;">12:00-13:00</td>
+												<td style="text-align:center;">13:30-15:00</td>
+											</tr>
+											<tr>
+												<td>Streda</td>
+												<td style="text-align:center;">09:00-11:00</td>
+												<td style="text-align:center;">11:00-14:00</td>
+												<td style="text-align:center;">14:00-15:00</td>
+												<td style="text-align:center;">15:00-17:00</td>
+											</tr>
+											<tr>
+												<td>Štvrtok</td>
+												<td style="text-align:center;">07:00-08:00</td>
+												<td style="text-align:center;">08:00-12:00</td>
+												<td style="text-align:center;">12:00-13:00</td>
+												<td style="text-align:center;">13:30-15:00</td>
+											</tr>
+											<tr>
+												<td>Piatok</td>
+												<td style="text-align:center;">07:00-08:00</td>
+												<td style="text-align:center;">08:00-12:00</td>
+												<td style="text-align:center;">12:00-13:00</td>
+												<td style="text-align:center;">13:30-15:00</td>
+											</tr>
+									</div>
+									<br>
+									obed: 13:00-13:30<br>
+									<br>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</table>
+			<td style="background: url(public/res/bok2.png) repeat-y left; width: 5%;"></td>
+		</tr>
+	</table>
+	
+	<table>
+		<tr style="height:30px;"></tr>
+		<tr style="height: 100px;">
+			<td>
+				<table border=0 width=100% style="margin: 0 0 0 0;">
+					<tr>
+						<td
+							style="padding: 0px 0px 0px 50px; width: 200px; height: 100px; background: url(public/res/napisBezSMALL.png) no-repeat center;">
+						</td>
+						<td style="width: 300px; font: 15px Bookman Old Style; font-style: bold; color: #FFFFFF;">
+							<p>Intern&aacute; ambulancia</p>
+							<p>Vajansk&eacute;ho 68</p>
+							<p>900 01 Modra</p>
+						</td>
+						<td style="font: 15px Bookman Old Style; font-style: bold; color: #FFFFFF; ">
+							<p>bibzova@gmail.com</p>
+							<p>0911/122620</p>
+							<p>033/6408378</p>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr style="height:20px;">
+			<td
+				style="background: #f4fdff;text-align: center; font: 11px Bookman Old Style; font-style: none; color: #000080;">
+				2012 medbi s.r.o. design&code by mathio</a>
+			</td>
+		</tr>
+	</table>
+</body>
+
+</html>

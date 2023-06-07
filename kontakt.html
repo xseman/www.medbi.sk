@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+<head>
+	<title>Interná ambulancia - medbi s.r.o.</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+	<meta http-equiv="Content-Language" content="en" />
+	<meta http-equiv="last-modified" content="16.07.2009 23:00:12" />
+	<meta http-equiv="Content-Type-Script" content="text/javascript" />
+
+	<script type="text/javascript" src="public/js/prototype.js"></script>
+	<script type="text/javascript" src="public/js/scriptaculous.js%3Fload=effects"></script>
+	<script type="text/javascript" src="public/js/lightbox.js"></script>
+
+	<script>
+		window.onload = function () {
+			initImage();
+			if ($menu == 1) {
+				//initImage2();
+			}
+		}
+
+		function initImage() {
+			imageId = 'thephoto';
+			image = document.getElementById(imageId);
+			setOpacity(image, 0);
+			image.style.visibility = 'visible';
+			fadeIn(imageId, 0);
+		}
+
+		function setOpacity(obj, opacity) {
+			opacity = (opacity == 100) ? 99.999 : opacity;
+
+			// IE/Win
+			obj.style.filter = "alpha(opacity:" + opacity + ")";
+
+			// Safari<1.2, Konqueror
+			obj.style.KHTMLOpacity = opacity / 100;
+
+			// Older Mozilla and Firefox
+			obj.style.MozOpacity = opacity / 100;
+
+			// Safari 1.2, newer Firefox and Mozilla, CSS3
+			obj.style.opacity = opacity / 100;
+		}
+
+		function fadeIn(objId, opacity) {
+			if (document.getElementById) {
+				obj = document.getElementById(objId);
+				if (opacity <= 100) {
+					setOpacity(obj, opacity);
+					opacity += 5;
+					window.setTimeout("fadeIn('" + objId + "'," + opacity + ")", 50);
+				}
+			}
+		}
+	</script>
+
+	<link rel="stylesheet" type="text/css" href="public/res/styles.css" media="screen, print" />
+	<link rel="stylesheet" type="text/css" href="public/res/linky.css" media="screen, print" />
+	<link rel="stylesheet" type="text/css" href="public/res/photoholder.css" media="screen, print" />
+	<link rel="stylesheet" href="public/css/lightbox.css" type="text/css" media="screen" />
+</head>
+
+
+<body style="margin:30px 0px 0px 0px; background: #145ac4 url(public/res/bgr.png) repeat-x;">
+	<table width=100% align=center border="0" cellspacing="0" cellpadding="0" style="width: 1000px; margin: 0 0 0 0;">
+		<tr style="height: 150px; background: url(public/res/wtf.png) no-repeat ;">
+			<td style=" height: 90px; width: 100%;  ">
+				<table border=0 width=100% height=90px>
+					<tr>
+						<td>
+							<div style="padding: 0px 0px 0px 40px;">
+								<img src="public/res/bez3.png">
+							</div>
+						</td>
+						<td style="width: 50%; padding: 40px 0px 0px 0px;">
+							<div id="menu">
+								<a href='/'>Úvod</a>
+								<a href='/ponuka.html'>Čo ponúkame</a>
+								<a href='/galeria.html'>Galéria</a>
+								<b href='/kontakt.html'>Kontakt</b>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr style="height: 60px; background: url(public/res/bgr_ramik1.png) no-repeat center bottom;">
+			<td></td>
+		</tr>
+
+		<tr>
+			<td>
+				<table border=0 cellspacing=0 cellpadding=0 width=100% style="margin: 0px 0px 0px 0px;">
+
+					<td style="background: url(public/res/bok1.png) repeat-y right; width: 5%;">
+					</td>
+
+					<td
+						style="width: 90%; min-height: 600px; background: #f4fdff url(public/res/bgr_obsah.png) repeat-x; vertical-align:top;padding: 30px 0 0 0;">
+						<table border=0 width=100%>
+							<tr>
+								<td style="width:50%; padding: 0 0 0 30px; vertical-align: top;">
+									<img src="public/res/kontakt.png" id='thephoto'>
+									<p>Intern&aacute; ambulancia Medbi s.r.o.</p>
+									<p>Vajansk&eacute;ho 68</p>
+									<p>900 01 Modra</p>
+									<p>&nbsp;</p>
+									<p>MUDr. Anna Bibzov&aacute;</p>
+									<p>bibzova@gmail.com</p>
+									<p>0911/122620</p>
+									<p>033/6408378</p>
+
+								</td>
+								<td style="width:50%; padding: 0 0 0 30px; vertical-align: center;">
+									<div
+										style="padding: 0 0 20px 30px; font: 16px Bookman Old Style; font-style: none; color: #000080; ">
+										<BR>Kde nás nájdete?
+									</div>
+									<a
+										href="http://maps.google.sk/maps?hl=sk&q=Vajanskeho+68+modra&um=1&ie=UTF-8&hq=&hnear=Vajansk%C3%A9ho+68,+Modra&gl=sk&ei=OEJNTemEOpK0hAfCssS_Dg&sa=X&oi=geocode_result&ct=title&resnum=1&ved=0CBcQ8gEwAA"><img
+										src="public/files/mapa.JPG"
+									></a>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td style="background: url(public/res/bok2.png) repeat-y left; width: 5%;"></td>
+				</table>
+			</td>
+		</tr>
+
+		<tr style="height:30px;"></tr>
+		<tr style="height: 100px;">
+			<td>
+				<table border=0 width=100% style="margin: 0 0 0 0;">
+					<tr>
+						<td style="padding: 0px 0px 0px 50px; width: 200px; height: 100px; background: url(public/res/napisBezSMALL.png) no-repeat center;"></td>
+						<td style="width: 300px; font: 15px Bookman Old Style; font-style: bold; color: #FFFFFF; ">
+							<p>Intern&aacute; ambulancia</p>
+							<p>Vajansk&eacute;ho 68</p>
+							<p>900 01 Modra</p>
+						</td>
+						<td style="font: 15px Bookman Old Style; font-style: bold; color: #FFFFFF; ">
+							<p>bibzova@gmail.com</p>
+							<p>0911/122620</p>
+							<p>033/6408378</p>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr style="height:20px;">
+			<td style="background: #f4fdff;text-align: center; font: 11px Bookman Old Style; font-style: none; color: #000080;">
+				2012 medbi s.r.o. design&code by mathio
+			</td>
+		</tr>
+
+	</table>
+</body>
+
+</html>

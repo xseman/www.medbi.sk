@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+<head>
+	<title>Interná ambulancia - medbi s.r.o.</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+	<meta http-equiv="Content-Language" content="en" />
+	<meta http-equiv="last-modified" content="16.07.2009 23:00:12" />
+	<meta http-equiv="Content-Type-Script" content="text/javascript" />
+
+	<script type="text/javascript" src="public/js/prototype.js"></script>
+	<script type="text/javascript" src="public/js/scriptaculous.js%3Fload=effects"></script>
+	<script type="text/javascript" src="public/js/lightbox.js"></script>
+
+	<script>
+		window.onload = function () {
+			initImage();
+			if ($menu == 1) {
+				//initImage2();
+			}
+		}
+
+		function initImage() {
+			imageId = 'thephoto';
+			image = document.getElementById(imageId);
+			setOpacity(image, 0);
+			image.style.visibility = 'visible';
+			fadeIn(imageId, 0);
+		}
+
+		function setOpacity(obj, opacity) {
+			opacity = (opacity == 100) ? 99.999 : opacity;
+
+			// IE/Win
+			obj.style.filter = "alpha(opacity:" + opacity + ")";
+
+			// Safari<1.2, Konqueror
+			obj.style.KHTMLOpacity = opacity / 100;
+
+			// Older Mozilla and Firefox
+			obj.style.MozOpacity = opacity / 100;
+
+			// Safari 1.2, newer Firefox and Mozilla, CSS3
+			obj.style.opacity = opacity / 100;
+		}
+
+		function fadeIn(objId, opacity) {
+			if (document.getElementById) {
+				obj = document.getElementById(objId);
+				if (opacity <= 100) {
+					setOpacity(obj, opacity);
+					opacity += 5;
+					window.setTimeout("fadeIn('" + objId + "'," + opacity + ")", 50);
+				}
+			}
+		}
+	</script>
+
+	<link rel="stylesheet" type="text/css" href="public/res/styles.css" media="screen, print" />
+	<link rel="stylesheet" type="text/css" href="public/res/linky.css" media="screen, print" />
+	<link rel="stylesheet" type="text/css" href="public/res/photoholder.css" media="screen, print" />
+	<link rel="stylesheet" href="public/css/lightbox.css" type="text/css" media="screen" />
+</head>
+
+
+<body style="margin:30px 0px 0px 0px; background: #145ac4 url(public/res/bgr.png) repeat-x;">
+	<table 
+		width=100% 
+		align=center 
+		border="0" 
+		cellspacing="0" 
+		cellpadding="0"
+		style="width: 1000px; margin: 0 0 0 0;"
+	>
+	<tr style="height: 150px; background: url(public/res/wtf.png) no-repeat ;">
+		<td style=" height: 90px; width: 100%;  ">
+			<table border=0 width=100% height=90px>
+				<tr>
+					<td>
+						<div style="padding: 0px 0px 0px 40px;">
+							<img src="public/res/bez3.png">
+						</div>
+					</td>
+					<td style="width: 50%; padding: 40px 0px 0px 0px;">
+						<div id="menu">
+							<a href='/'>Úvod</a>
+							<b href='/ponuka.html'>Čo ponúkame</b>
+							<a href='/galeria.html'>Galéria</a>
+							<a href='/kontakt.html'>Kontakt</a>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+
+		<tr style="height: 60px; background: url(public/res/bgr_ramik1.png) no-repeat center bottom;">
+			<td>
+
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<table border=0 cellspacing=0 cellpadding=0 width=100% style="margin: 0px 0px 0px 0px;">
+					<td style="background: url(public/res/bok1.png) repeat-y right; width: 5%;">
+					</td>
+
+					<td style="width: 90%; min-height: 600px; background: #f4fdff url(public/res/bgr_obsah.png) repeat-x; vertical-align:top;padding: 30px 0 0 0;">
+						<table border=0 width=100%>
+							<tr>
+								<td style="width:50%; padding: 0 0 0 0px;">
+									<img src="public/res/ponuka.png" id='thephoto'>
+									<div
+										style="padding: 0 0 0 30px; font: 16px Bookman Old Style; font-style: none; color: #000080; ">
+										<ul>
+											<li>diagnostika a liečba chor&ocirc;b vn&uacute;torn&yacute;ch
+												org&aacute;nov</li>
+											<li>v&yacute;živov&eacute; poradenstvo pri chorob&aacute;ch
+												vn&uacute;torn&yacute;ch org&aacute;nov</li>
+											<li>EKG</li>
+											<li><strong>HOLTER EKG 24hodinov&yacute; (dom&aacute;ce 24 hodinov&eacute;
+													monitorovanie EKG z&aacute;znamu)</strong></li>
+											<li><strong><strong>HOLTER</strong>&nbsp;tlakov&yacute; 24 hodinov&yacute;
+													(dom&aacute;ce 24 hodinov&eacute; monitorovanie krvn&eacute;ho tlaku
+													a pulzu)</strong></li>
+											<li><strong>dom&aacute;ci EKG selfmonitoring (monitorovanie EKG
+													z&aacute;znamu pri pocitoch n&aacute;hleho
+													z&aacute;chvatov&eacute;ho b&uacute;&scaron;enia srdca)</strong>
+											</li>
+											<li>odbery krvi</li>
+											<li><em><strong>pr&iacute;strojov&eacute; okamžit&eacute; vy&scaron;etrenie
+														por&uacute;ch zr&aacute;žanlivosti krvi</strong></em></li>
+											<li><em><strong>pr&iacute;strojov&eacute; okamžit&eacute; vy&scaron;etrenie
+														hladiny cukru v krvi</strong></em></li>
+											<li><em><strong>pr&iacute;strojov&eacute; okamžit&eacute; vy&scaron;etrenie
+														hladiny cholesterolu v krvi</strong></em></li>
+											<li>prevent&iacute;vne prehliadky</li>
+											<li>predoperačn&eacute; vy&scaron;etrenia</li>
+											<li>vystavenie zdravotn&eacute;ho preukazu</li>
+											<li>vy&scaron;etrenie pre potvrdenie sp&ocirc;sobilosti viesť
+												motorov&eacute; vozidlo</li>
+											<li>vy&scaron;etrenie pred n&aacute;stupom do pr&aacute;ce</li>
+											<li>vy&scaron;etrenia na vlastn&uacute; žiadosť pacienta</li>
+											<li>&scaron;peci&aacute;lne intern&eacute; vy&scaron;etrenia (pred
+												hospitaliz&aacute;ciou v psychiatrickej liečebni)</li>
+											<li>vy&scaron;etrenie pacienta v dom&aacute;com prostred&iacute;
+												vr&aacute;tane odberov krvi a EKG po objednan&iacute;</li>
+											<li>vystavenie n&aacute;vrhu na k&uacute;peľn&uacute;
+												liečbu<br /><strong><br /></strong></li>
+											<li><span style="font-size: xx-large;">Cenn&iacute;k MEDBI s.r.o. <span
+														style="font-size: medium;">v
+														EUR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>&nbsp;&nbsp;&nbsp;
+												&nbsp;<br />&nbsp; <br />
+												<ul>
+													<li>Odber&nbsp; krvi&nbsp; na&nbsp; vlastn&uacute;&nbsp;
+														žiadosť.....................................................&nbsp;&nbsp;&nbsp;
+														3,00</li>
+												</ul>
+												<ul>
+													<li>Vy&scaron;etrenie&nbsp; pacienta bez&nbsp; zdravotnej&nbsp;
+														poisťovne &hellip;..........................20,00</li>
+													<li>Vystavenie zdravotn&eacute;ho&nbsp; potvrdenia&nbsp; k&nbsp;
+														vodičsk&eacute;mu preukazu....&nbsp; 15,00</li>
+													<li>Vystavenie zdravotn&eacute;ho&nbsp; preukazu (na&nbsp;
+														pr&aacute;cu&nbsp; v potravin&aacute;rstve )...........15,00
+													</li>
+													<li>Vstupn&aacute;&nbsp; prehliadka&nbsp; pred prijat&iacute;m&nbsp;
+														do prac.&nbsp; pomeru ................&nbsp; 15,00</li>
+													<li>Vy&scaron;etrenie na&nbsp; posudkov&eacute;&nbsp;
+														&uacute;čely.........................................................10,00
+													</li>
+													<li>Vy&scaron;etrenie pre&nbsp; komerčn&eacute; &uacute;čely&nbsp;
+														poisťovn&iacute;.......................................15,00
+													</li>
+													<li>Predoperačn&eacute;&nbsp; vy&scaron;etrenie pred
+														interupciou....................................&nbsp; 20,00</li>
+													<li>Predoperačn&eacute;&nbsp; vy&scaron;etrenie&nbsp; pred&nbsp;
+														umel&yacute;m&nbsp; oplodnen&iacute;m..................&nbsp;
+														20,00</li>
+													<li>Predoperačn&eacute;&nbsp; vy&scaron;etrenie&nbsp; pred&nbsp;
+														estetickou oper&aacute;ciou.................... 20.00</li>
+													<li>N&aacute;klady&nbsp; na&nbsp; dopravu pri&nbsp;
+														n&aacute;v&scaron;teve&nbsp; pacienta v&nbsp;
+														dom&aacute;cnosti..........13,00</li>
+													<li>Kop&iacute;rovanie&nbsp; zdrav. dokum. pre&nbsp;
+														pacienta......................0,15/1 stranaA4</li>
+													<li>Potvrdenie o&nbsp; zdravotnom&nbsp; stave&nbsp; na&nbsp;
+														žiadosť&nbsp; pacienta...................15,00</li>
+													<li>Poradenstvo pred&nbsp; vycestovan&iacute;m&nbsp; do
+														exotic.&nbsp; kraj&iacute;n................... ..&nbsp;
+														20,00&nbsp;</li>
+													<li>Nutričn&eacute; poradenstvo
+														&hellip;....................................................................10,00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+													</li>
+													<li>Zapožičanie pr&iacute;stroja&nbsp; do&nbsp; dom&aacute;cnosti
+														/24 hod.(Holter&nbsp; TK) ..&nbsp;&nbsp; .&nbsp;&nbsp;&nbsp;
+														10,00</li>
+													<li>Zapožičanie pr&iacute;stroja&nbsp; do&nbsp;
+														dom&aacute;cnosti/24h (Holter Ekg) &hellip;...........20,00</li>
+													<li>Zapožičanie&nbsp; digit&aacute;lneho&nbsp; tlakomeru&nbsp;
+														do&nbsp; dom&aacute;cnosti./24hod.........3,00</li>
+													<li>Epiz&oacute;dny&nbsp; Ekg&nbsp; dom&aacute;ci&nbsp; monitoring.
+														/24&nbsp; hod .. &hellip;.
+														&hellip;...............&nbsp;&nbsp;&nbsp;&nbsp; 10,00</li>
+													<li>Zapožičanie&nbsp; pr&iacute;stroja&nbsp; na&nbsp;
+														monitorovanie&nbsp;
+														INR/24h........................5,00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+													</li>
+													<li>Poskytnutie&nbsp; vy&scaron;etrenia na vlastn&uacute;&nbsp;
+														žiadosť, pričom&nbsp; služba&nbsp; nie je
+														vyk&aacute;zan&aacute;&nbsp; na zdravotn&uacute;&nbsp;
+														poisťovňu................................................30,00
+													</li>
+													<li>Elektronick&aacute;&nbsp; komunik&aacute;cia&nbsp; s&nbsp;
+														pacientom/za&nbsp; 1&nbsp; mesiac..................5,00</li>
+													<li>Vy&scaron;etrenie na potreby pol&iacute;cie a&nbsp;
+														forenzn&eacute;&nbsp;
+														&uacute;čely..............................30,00</li>
+													<li>Vyp&iacute;sanie&nbsp; žiadosti&nbsp; pre&nbsp; ADOS&nbsp; a
+														s&uacute;kromn&eacute; opatrovateľsk&eacute; agent&uacute;ry
+													</li>
+												</ul>
+												na&nbsp; vlastn&uacute;&nbsp; žiadosť&nbsp; pacienta
+												&hellip;......................................................15,00<strong><br /></strong><br /><br /><em><strong><br /><br /></strong></em><br /><br /><br /><br /><br />&nbsp;<br /><br /><br />
+											</li>
+										</ul>
+									</div>
+								</td>
+
+							</tr>
+						</table>
+					</td>
+
+					<td style="background: url(public/res/bok2.png) repeat-y left; width: 5%;">
+					</td>
+
+				</table>
+			</td>
+		</tr>
+
+		<tr style="height:30px;"></tr>
+		<tr style="height: 100px;">
+			<td>
+				<table border=0 width=100% style="margin: 0 0 0 0;">
+					<tr>
+						<td
+							style="padding: 0px 0px 0px 50px; width: 200px; height: 100px; background: url(public/res/napisBezSMALL.png) no-repeat center;">
+						</td>
+						<td style="width: 300px; font: 15px Bookman Old Style; font-style: bold; color: #FFFFFF; ">
+							<p>Intern&aacute; ambulancia</p>
+							<p>Vajansk&eacute;ho 68</p>
+							<p>900 01 Modra</p>
+						</td>
+						<td style="font: 15px Bookman Old Style; font-style: bold; color: #FFFFFF; ">
+							<p>bibzova@gmail.com</p>
+							<p>0911/122620</p>
+							<p>033/6408378</p>
+						</td>
+					</tr>
+				</table>
+			</td>
+
+		</tr>
+
+		<tr style="height:20px;">
+			<td
+				style="background: #f4fdff;text-align: center; font: 11px Bookman Old Style; font-style: none; color: #000080;">
+				2012 medbi s.r.o. design&code by mathio</a>
+			</td>
+		</tr>
+
+	</table>
+</body>
+
+</html>
