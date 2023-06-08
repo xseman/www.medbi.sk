@@ -1,0 +1,7 @@
+.active-link::after {
+	content: " ]";
+}
+
+.active-link::before {
+	content: "[ ";
+}
