@@ -1,0 +1,6 @@
+@import "./_water.css";
+
+body {
+	margin-top: 10px;
+	max-width: 100ch;
+}

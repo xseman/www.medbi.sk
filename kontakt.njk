@@ -1,0 +1,34 @@
+---
+tags: nav
+layout: base.njk
+title: Kontakt
+---
+
+<h1>Kontakt</h1>
+
+<p>Kde nás nájdete</p>
+
+<div id="map"></div>
+
+<link
+	rel="stylesheet"
+	href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<style>
+	#map {
+		height: 400px;
+	}
+</style>
+
+<script>
+	const map = L.map("map").setView([48.33122, 17.30852], 18);
+
+	const tiles = L.tileLayer(
+		"https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+	).addTo(map);
+
+	const marker = L.marker([48.33125, 17.30853]).addTo(map);
+</script>
