@@ -15,7 +15,7 @@
 				</a>
 
 				<ul>
-					{%- for nav in search.pages("nav") -%}
+					{%- for nav in search.pages("nav", "url") -%}
 					  	<li>
 							<a href={{ nav.data.url }}>
 								{{ nav.data.title }}
