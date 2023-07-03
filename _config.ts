@@ -1,11 +1,17 @@
 import lume from "lume/mod.ts";
-import lightningCss from "lume/plugins/lightningcss.ts";
-import esbuild from "lume/plugins/esbuild.ts";
 
-const site = lume();
+import esbuild from "lume/plugins/esbuild.ts";
+import lightningCss from "lume/plugins/lightningcss.ts";
+import sitemap from "lume/plugins/sitemap.ts";
+
+const site = lume({
+	location: new URL("http://medbi.sk"),
+});
 
 site
 	.copy("assets")
+	/** needs location config, else localhost is default the domain name */
+	.use(sitemap())
 	.use(esbuild({
 		extensions: [".js", ".ts"],
 	}))
