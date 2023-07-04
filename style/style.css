@@ -4,3 +4,16 @@ body {
 	margin-top: 10px;
 	max-width: 100ch;
 }
+
+table {
+	display: inline-block;
+	width: 100%;
+	overflow-x: auto;
+	white-space: nowrap;
+}
+
+table td,
+table th,
+table tr {
+	padding: 0.4rem 0.8rem;
+}
