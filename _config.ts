@@ -7,12 +7,16 @@ import minifyHTML from "lume/plugins/minify_html.ts";
 import lightningCss from "lume/plugins/lightningcss.ts";
 
 const site = lume({
+	/** required for sitemap() */
 	location: new URL("http://medbi.sk"),
 });
 
 site
 	.copy("assets")
-	/** needs location config, else localhost is the domain name */
+	.remoteFile(
+		"./_includes/water.css",
+		"https://esm.sh/water.css@2.1.1/out/water.css",
+	)
 	.use(sitemap())
 	.use(inline())
 	.use(minifyHTML())
@@ -22,6 +26,7 @@ site
 	}))
 	/** also automaticly copy static files based on css import */
 	.use(lightningCss({
+		// includes: "./_includes",
 		options: { minify: true },
 	}));
 
