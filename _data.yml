@@ -1,0 +1,11 @@
+metas:
+    type: website
+    robots: true
+    site: Interná ambulancia Modra
+    logo: /assets/logo.svg
+    lang: sk
+    keywords:
+        - interná ambulancia
+        - pohotovostná služba
+        - urgentná zdravotná starostlivosť
+        - kardiológ
