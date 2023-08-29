@@ -14,6 +14,7 @@ const site = lume({
 
 site
 	.copy("assets")
+	.copy("404.html")
 	.remoteFile(
 		"./_includes/water.css",
 		"https://esm.sh/water.css@2.1.1/out/water.css",
