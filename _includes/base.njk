@@ -10,49 +10,66 @@
 	</head>
 
 	<body>
-		<header>
-			<nav>
-				<a href="/">
-					<img src="/assets/logo.svg" width="200" alt="logo" inline>
-				</a>
-
-				<ul>
-					{%- for nav in search.pages("nav", "url") -%}
-					  	<li>
-							<a href={{ nav.data.url }}>{{ nav.data.nav }}</a>
+		<section>
+			<header>
+				<nav>
+					<ul>
+						<li>
+							<a href="/">
+								<img src="/assets/logo.svg" width="200" alt="logo" inline>
+							</a>
 						</li>
-					{%- endfor -%}
-				</ul>
-			</nav>
-		</header>
+					</ul>
+				</nav>
 
-		<main>
-			{{ content | safe }}
-		</main>
-
-		<hr>
-		<footer style="
-			display: grid;
-			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-		">
-			<div>
-				<h3>MEDBI s.r.o.</h3>
-				<p>Interná ambulancia</p>
-				<p>Vajanského 68</p>
-				<p>900 01 Modra</p>
-			</div>
-
-			<div>
-				<h3>Kontakt</h3>
-				<p>bibzova@gmail.com</p>
-				<p>033/640 83 78</p>
-			</div>
-
-			<div>
-				<h3>Tím</h3>
-				<p>MUDr. Anna Bibzová (Lekár)</p>
-				<p>Mrg. Miroslava Hríbová (Sestra)</p>
-			</div>
-		</footer>
+				<nav>
+					<ul>
+						{%- for p in search.pages("nav", "url") -%}
+							  <li>
+								<a href={{ p.url }}>{{ p.nav }}</a>
+							</li>
+						{%- endfor -%}
+					</ul>
+				</nav>
+			</header>
+	
+			<article>
+				{{ content | safe }}
+			</article>
+	
+			<footer>
+				<nav>
+					<ul>
+						<li>
+							<b>MEDBI s.r.o.</b>
+							<ul>
+								<li>Interná ambulancia</li>
+								<li>Vajanského 68</li>
+								<li>900 01 Modra</lu>
+							</ul>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<b>Kontakt</b>
+							<ul>
+								<li>bibzova@gmail.com</li>
+								<li>033/640 83 78</li>
+							</ul>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<b>Tím</b>
+							<ul>
+								<li>MUDr. Anna Bibzová (Lekár)</li>
+								<li>Mrg. Miroslava Hríbová (Sestra)</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</footer>
+			<hr>
+		</section>
 	</body>
 </html>
