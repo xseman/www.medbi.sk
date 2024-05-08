@@ -17,7 +17,7 @@ site.copy("assets")
 	.copy("404.html")
 	.remoteFile(
 		"./_includes/tacit.css",
-		"https://esm.sh/tacit-css/dist/tacit-css-1.6.0.css"
+		"https://esm.sh/tacit-css@1.7.1/dist/tacit-css-1.7.1.css",
 	)
 	.use(nunjucks())
 	.use(sitemap())
@@ -28,14 +28,14 @@ site.copy("assets")
 		esbuild({
 			extensions: [".js", ".ts"],
 			options: { treeShaking: true, minify: true },
-		})
+		}),
 	)
 	/** also automaticly copy static files based on css import */
 	.use(
 		lightningCss({
 			// includes: "./_includes",
 			options: { minify: true },
-		})
+		}),
 	);
 
 export default site;
